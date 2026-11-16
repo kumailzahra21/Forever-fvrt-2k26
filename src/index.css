@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* ========================================
+   BESTIE UNIVERSE - PURPLE GALAXY THEME
+======================================== */
+
+:root {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #fff7ff;
+  background: #090516;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-dark: #090516;
+  --bg-purple: #160b2c;
+  --purple: #a855f7;
+  --pink: #ec4899;
+  --light-pink: #f9a8d4;
+  --lavender: #c4b5fd;
+  --white: #fff7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-dark);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 15% 10%,
+      rgba(126, 34, 206, 0.22),
+      transparent 38%),
+    radial-gradient(ellipse at 85% 25%,
+      rgba(219, 39, 119, 0.13),
+      transparent 35%),
+    radial-gradient(ellipse at 50% 85%,
+      rgba(91, 33, 182, 0.16),
+      transparent 42%),
+    #090516;
+}
+
+/* Selection */
+
+::selection {
+  color: white;
+  background: rgba(219, 39, 119, 0.65);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090516;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: linear-gradient(to bottom,
+      #a855f7,
+      #ec4899);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Buttons */
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #f9a8d4;
+  outline-offset: 4px;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff7ff;
+  letter-spacing: -0.02em;
+}
+
+/* Purple Pink Glow */
+
+.purple-glow {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+.pink-glow {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+}
+
+/* Glass Effect */
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Magical Text */
+
+.gradient-text {
+  background: linear-gradient(90deg,
+      #f9a8d4,
+      #c084fc,
+      #f0abfc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Floating Animation */
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Twinkling Stars */
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.twinkle {
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+/* Falling Petals */
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal-fall {
+  animation: petal-fall 10s linear infinite;
+}
+
+/* Page */
+
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  body {
+    min-width: 320px;
+  }
+
+  h1 {
+    line-height: 1.2;
+  }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
